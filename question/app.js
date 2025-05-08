@@ -44,6 +44,14 @@ console.log(playerList[1].favorites[1]);
 //Q5
 console.log((playerList[0].age + playerList[1].age + playerList[2].age) / 3);
 
+//Q5 対象の配列の中身の数が変わったとしても処理を書き換えなくてもいいようにする。
+let sum = 0;
+for (let i = 0; i < playerList.length; i++) {
+  sum += playerList[i].age;
+}
+
+console.log(sum / playerList.length);
+
 //Q6
 function sayHello() {
   console.log('Hello');
@@ -105,6 +113,10 @@ console.log(randomInt);
 setTimeout(function(){
   console.log('Hello World!');
 },3000);
+
+//Q2コールバック関数とは
+//コールバック関数とは関数に引数として渡し、関数内で呼び出される関数。
+//今回は無名関数のfunction()
 
 //Q3
 let num = 4;
