@@ -6,7 +6,7 @@ let age = 24;
 console.log('私のニックネームは' + nickname + 'です。年齢は' + age + '歳です。' );
 
 //Q2
-languages = ['JavaScript', 'PHP', 'Ruby', 'Python', 'Go'];
+let languages = ['JavaScript', 'PHP', 'Ruby', 'Python', 'Go'];
 
 console.log(`私の好きな言語は${languages[0]}です。次は${languages[3]}を勉強してみたいです。`);
 
@@ -40,7 +40,7 @@ let playerList = [
 ];
 
 console.log(playerList[1].favorites[1]);
-
+console.log(playerList[2].favorites[0]);
 //Q5
 console.log((playerList[0].age + playerList[1].age + playerList[2].age) / 3);
 
@@ -119,7 +119,7 @@ setTimeout(function(){
 //今回は無名関数のfunction()
 
 //Q3
-let num = 4;
+let num = '4';
 if (num > 0) {
   console.log('num is greater than 0');
 } else if (num < 0) {
@@ -138,11 +138,30 @@ console.log(numbers);
 
 //Q5
 let mixed = [4, '2', 5, '8', '9', 0, 1];
+
+//元のコード
 for (let i = 0; i <= 6; i++) {
   if ((typeof mixed[i] === 'number') && (mixed[i] % 2 === 0 )) {
     console.log('even');    
   } else if ((typeof mixed[i] === 'number') && (mixed[i] % 2 !== 0)) {
     console.log('odd');
+  } else {
+    console.log('not number');
+  }
+}
+
+
+//宿題
+for (let i = 0; i <= 6; i++) {
+  if (typeof mixed[i] === 'number') {
+
+    if (mixed[i] % 2 === 0) {
+      console.log('even') 
+
+    } else {
+      console.log('odd');
+    }
+
   } else {
     console.log('not number');
   }
